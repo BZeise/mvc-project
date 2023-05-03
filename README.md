@@ -10,3 +10,4 @@
 
 ### Running, testing, etc notes
 -  `dotnet watch` will run the app in hot reload mode
+-  how about a quick green box, eh?  lol.
