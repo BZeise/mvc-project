@@ -23,3 +23,4 @@
     - New thing:  When creating a class, you can type `prop` then hit tab to get the basics of a property out
     - Added Book.cs class.  TODOs remain there, including defaults and validation
     - Installing EntityFramework.Core class via NuGet Package Manager
+    - Pausing around here https://youtu.be/AopeJjkcRvU?t=4663
