@@ -32,4 +32,13 @@
     - `ctor` is another shortcut to stub out a constructor
     - `public ApplicationDbContext(DbContextOptions<DbContext> options) : base(options)`
         - When declaring a class like so, using : , we are saying to pass the arguments up to the base class we are extending from
-    
+    - Using EntityFrameworkCore, we're using the VS Code CLI to simulate interfacing with the NuGet Package Manager Console that VS would use
+    - `dotnet ef migrations add BookInitialMigration`
+        - ran this to add a Migration which added my Book class to the database as a table.
+    - `dotnet ef database update`
+        - Ran this to do the update to actually update the database to run any migrations that haven't run yet
+    - STEPS TO ADD A NEW TABLE
+        - First, create a model with properties
+        - Next, in ApplicationDbContext, you have to create a `DbSet` for that
+        - Then in the console, add the migration
+        - Also in the console, run the database update command
