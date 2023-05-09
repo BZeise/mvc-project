@@ -33,6 +33,8 @@
     - `public ApplicationDbContext(DbContextOptions<DbContext> options) : base(options)`
         - When declaring a class like so, using : , we are saying to pass the arguments up to the base class we are extending from
     - Using EntityFrameworkCore, we're using the VS Code CLI to simulate interfacing with the NuGet Package Manager Console that VS would use
+    - Needed help from here to figure out how to do it in VS Code:
+        - https://stackoverflow.com/questions/41536603/visual-studio-code-entity-framework-core-add-migration-not-recognized
     - `dotnet ef migrations add BookInitialMigration`
         - ran this to add a Migration which added my Book class to the database as a table.
     - `dotnet ef database update`
