@@ -29,3 +29,7 @@
     - Installed SSMS and Sql Server '22.  Annoying
     - Set up local testing db, name is `SUSAN\BENSQLSERVER`
     - Set up connectionString in appsettings.json.  TODO:  Check the name of the database I passed there
+    - `ctor` is another shortcut to stub out a constructor
+    - `public ApplicationDbContext(DbContextOptions<DbContext> options) : base(options)`
+        - When declaring a class like so, using : , we are saying to pass the arguments up to the base class we are extending from
+    
