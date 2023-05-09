@@ -24,3 +24,8 @@
     - Added Book.cs class.  TODOs remain there, including defaults and validation
     - Installing EntityFramework.Core class via NuGet Package Manager
     - Pausing around here https://youtu.be/AopeJjkcRvU?t=4663
+
+- 5/9/23
+    - Installed SSMS and Sql Server '22.  Annoying
+    - Set up local testing db, name is `SUSAN\BENSQLSERVER`
+    - Set up connectionString in appsettings.json.  TODO:  Check the name of the database I passed there
