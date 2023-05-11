@@ -44,3 +44,8 @@
         - Next, in ApplicationDbContext, you have to create a `DbSet` for that
         - Then in the console, add the migration
         - Also in the console, run the database update command
+
+- 5/11/23
+    - Gonna set up CRUD now that I have a database running
+    - So much annoying stuff.  Man is making me make a new controller first.
+    - What is `OnModelCreating` about?  Hmm.
