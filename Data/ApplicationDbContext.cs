@@ -19,6 +19,11 @@ namespace mvc_project.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Book>().HasData(
+                new Book { BookId = 1, Title = "Dune", DisplayOrder = 14 },
+                new Book { BookId = 2, Title = "Dune Messiah", DisplayOrder = 15 },
+                new Book { BookId = 3, Title = "Children of Dune", DisplayOrder = 16 }
+            );
         }
     }
 }

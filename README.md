@@ -49,3 +49,19 @@
     - Gonna set up CRUD now that I have a database running
     - So much annoying stuff.  Man is making me make a new controller first.
     - What is `OnModelCreating` about?  Hmm.
+
+- 5/12/23
+    - Short day yesterday.  Continuing on.
+    - we added this `
+    - "whenever anything has to be updated with database, we have to add a migration.  always always always remember that"
+        - So annoying.  need to understand these migrations better.
+        - ran command `dotnet ef migrations add SeedBookTable`
+            - How does it know what migrations I've added?  Just, everything in `ApplicationDbContext?`
+            - also ran the `dotnet ef database update`
+    - Had to change my use of DataAnnotations.  
+        - This worked:  
+            - `public string Author { get; set; } = "Unknown";`
+        - This did not work: 
+            - `[DefaultValue("Unknown")]`
+            - `public string Author { get; set; }`
+        - Error came up when I tried to add a migration for it
