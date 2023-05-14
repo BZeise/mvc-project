@@ -1,1 +1,33 @@
-<h1>Book List</h1>
+@{
+    ViewData["Title"] = "The Library";
+}
+@model List<Book>
+
+<div class="text-center">
+    <h1 class="display-4">Hiieeeee</h1>
+    <p>
+        This will be a page where we can add books.
+        It'll just be a table, with CRUD functionality.<br />
+        Maybe later I'll add different bookshelves for each user.<br />
+    </p>
+    <h1 class="display-4">Our Library</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Display Order</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.OrderBy(x => x.DisplayOrder))
+            {
+                <tr>
+                    <td>@obj.Title</td>
+                    <td>@obj.Author</td>
+                    <td>@obj.DisplayOrder</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

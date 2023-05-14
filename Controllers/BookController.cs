@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using mvc_project.Data;
+using mvc_project.Models;
 
 namespace mvc_project.Controllers
 {
@@ -12,15 +14,18 @@ namespace mvc_project.Controllers
     public class BookController : Controller
     {
         private readonly ILogger<BookController> _logger;
+        private readonly ApplicationDbContext _db;
 
-        public BookController(ILogger<BookController> logger)
+        public BookController(ILogger<BookController> logger, ApplicationDbContext db)
         {
             _logger = logger;
+            _db = db;
         }
 
         public IActionResult Index()
         {
-            return View();
+            List<Book> objBookList = _db.Books.ToList();
+            return View(objBookList);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

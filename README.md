@@ -65,3 +65,10 @@
             - `[DefaultValue("Unknown")]`
             - `public string Author { get; set; }`
         - Error came up when I tried to add a migration for it
+
+- 5/14/23
+    - Had a routing error
+        - `[Route("[controller]")]` before declaring my controller
+        - I'm not sure how that's supposed to be used, but it ended up removing the necessary controller action in my URL calls
+        - so it couldn't find /Index or /Error
+    - 
