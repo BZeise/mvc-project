@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace mvc_project.Controllers
 {
-    [Route("[controller]")]
+    // [Route("[controller]")]  // was default, but I'm not using this right now
     public class BookController : Controller
     {
         private readonly ILogger<BookController> _logger;
