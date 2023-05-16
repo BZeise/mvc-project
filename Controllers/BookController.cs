@@ -33,6 +33,14 @@ namespace mvc_project.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Create(Book obj)
+        {
+            _db.Books.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Book");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
