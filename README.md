@@ -71,4 +71,10 @@
         - `[Route("[controller]")]` before declaring my controller
         - I'm not sure how that's supposed to be used, but it ended up removing the necessary controller action in my URL calls
         - so it couldn't find /Index or /Error
-    - 
+    - icons were dumb
+
+- 5/16/23
+    - icons working through a different CDN than bootstrap provided
+    - also interesting logos from different companies
+        - such as: `<img height="32" width="32" src="https://unpkg.com/simple-icons@v8/icons/dotnet.svg" />`
+        
