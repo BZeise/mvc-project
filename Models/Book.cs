@@ -22,6 +22,7 @@ namespace mvc_project.Models
 
         [Required]
         [DefaultValue(0)]
+        [DisplayName("Display Order")]
         public int DisplayOrder { get; set; }
         // TODO:  define this to have a default value.  maybe go as far as to defaulting to the greatest existing value +1
     }
