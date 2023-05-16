@@ -6,22 +6,29 @@
             <h2 class="text-primary">Create Book</h2>
             <hr />
         </div>
-        <div class="mb-3">
-            <label>Title</label>
+        <div class="row mb-3 p-1">
+            <label class="p-0">Title</label>
             <input type="text" class="form-control">
         </div>
-        <div class="mb-3">
-            <label>Author</label>
+        <div class="row mb-3 p-1">
+            <label class="p-0">Author</label>
             <input type="text" class="form-control">
         </div>
-        <div class="mb-3">
-            <label>Display Order</label>
+        <div class="row mb-3 p-1">
+            <label class="p-0">Display Order</label>
             <input type="text" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
-        <a asp-controller="Book" asp-action="Index" class="btn btn-secondary" style="width:150px">
-            Back to List
-        </a>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-primary form-control">Create</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Book" asp-action="Index" class="btn btn-secondary-outline form-control">
+                    Back to List
+                </a>
+            </div>
+        </div>
+
     </div>
 </form>
 
