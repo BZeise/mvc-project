@@ -36,9 +36,16 @@ namespace mvc_project.Controllers
         [HttpPost]
         public IActionResult Create(Book obj)
         {
-            _db.Books.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("Index", "Book");
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                _db.Books.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index", "Book");
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

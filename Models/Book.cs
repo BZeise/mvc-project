@@ -13,6 +13,7 @@ namespace mvc_project.Models
         public int BookId { get; set; }
 
         [Required]
+        [MaxLength(100)]
         public string Title { get; set; }
 
         [DefaultValue("Unknown")]
@@ -21,7 +22,8 @@ namespace mvc_project.Models
         public DateTime ReleaseDate { get; set; }
 
         [Required]
-        [DefaultValue(0)]
+        [DefaultValue(69)]
+        [Range(1, 100, ErrorMessage = "Display Order must be between 1-100")]
         [DisplayName("Display Order")]
         public int DisplayOrder { get; set; }
         // TODO:  define this to have a default value.  maybe go as far as to defaulting to the greatest existing value +1
