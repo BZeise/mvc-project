@@ -40,6 +40,11 @@ namespace mvc_project.Controllers
             {
                 return View();
             }
+            else if (obj.Title == "SciFi")
+            {
+                ModelState.AddModelError("title", "Did you just enter a genre instead of a title?");
+                return View();
+            }
             else
             {
                 _db.Books.Add(obj);
