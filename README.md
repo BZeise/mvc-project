@@ -77,4 +77,5 @@
     - icons working through a different CDN than bootstrap provided
     - also interesting logos from different companies
         - such as: `<img height="32" width="32" src="https://unpkg.com/simple-icons@v8/icons/dotnet.svg" />`
-        
+    - worked out some initial CRUD
+    
