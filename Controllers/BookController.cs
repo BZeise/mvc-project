@@ -53,6 +53,40 @@ namespace mvc_project.Controllers
             }
         }
 
+        public IActionResult Edit(int? bookId)
+        {
+            if (bookId == null || bookId == 0)
+            {
+                return NotFound();
+            }
+            Book bookFromDb = _db.Books.Find(bookId);
+            if (bookFromDb == null)
+            {
+                return NotFound();
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Book obj)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            else if (obj.Title == "SciFi")
+            {
+                ModelState.AddModelError("title", "Did you just enter a genre instead of a title?");
+                return View();
+            }
+            else
+            {
+                _db.Books.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index", "Book");
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
