@@ -78,4 +78,16 @@
     - also interesting logos from different companies
         - such as: `<img height="32" width="32" src="https://unpkg.com/simple-icons@v8/icons/dotnet.svg" />`
     - worked out some initial CRUD
+    - Important concept:
+        - Implemented `_ValidationScriptsPartial.cshtml`
+        - which essentially added in client-side (responsive?) validation
+        - see this commit:
+            - https://github.com/BZeise/mvc-project/commit/276bc4d9745b87cab4bb962b3ff4864a6453ebc1
+        - TODO:  Make a series of notes in the notes doc about validation styles
+            - All the different types of validation and when we can implement them and why
+            - Client-side, server-side, using data annotations and .NET functions, etc
+
+- 5/19/23
+    - Back to CRUD.  Currently have CR.  Gonna work on U and D.
+    - added buttons first.  TODO:  Review table layout and think about what components/libraries I want to involve and work with long-term
     
