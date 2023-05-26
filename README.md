@@ -90,4 +90,11 @@
 - 5/19/23
     - Back to CRUD.  Currently have CR.  Gonna work on U and D.
     - added buttons first.  TODO:  Review table layout and think about what components/libraries I want to involve and work with long-term
-    
+    - added Edit and Delete functions, still need a view
+    - Note about things:
+        - `asp-route-bookId="@obj.BookId"`
+        -   I added this above line to provide a parameter to the function being called by `asp-action`
+        - Notice it needs to match the name of the parameter in the controller method
+
+- 5/26/23
+    - on the CRUD, put in some alternate db Find options

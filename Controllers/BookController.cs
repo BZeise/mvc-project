@@ -59,7 +59,10 @@ namespace mvc_project.Controllers
             {
                 return NotFound();
             }
-            Book bookFromDb = _db.Books.Find(bookId);
+            Book? bookFromDb = _db.Books.Find(bookId);
+            //Book? bookFromDb2 = _db.Books.FirstOrDefault(u => u.BookId == bookId);
+            //Book? bookFromDb3 = _db.Books.Where(u => u.BookId == bookId).FirstOrDefault();
+
             if (bookFromDb == null)
             {
                 return NotFound();
