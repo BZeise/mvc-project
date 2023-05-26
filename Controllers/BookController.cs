@@ -85,6 +85,37 @@ namespace mvc_project.Controllers
             }
         }
 
+        public IActionResult Delete(int? bookId)
+        {
+            if (bookId == null || bookId == 0)
+            {
+                return NotFound();
+            }
+            Book? bookFromDb = _db.Books.Find(bookId);
+
+            if (bookFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(bookFromDb);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Book obj)
+        {
+            Book? bookFromDb = _db.Books.Find(obj.BookId);
+            if (bookFromDb == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                _db.Books.Remove(bookFromDb);
+                _db.SaveChanges();
+                return RedirectToAction("Index", "Book");
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
