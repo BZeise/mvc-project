@@ -67,7 +67,7 @@ namespace mvc_project.Controllers
             {
                 return NotFound();
             }
-            return View();
+            return View(bookFromDb);
         }
 
         [HttpPost]
@@ -77,14 +77,9 @@ namespace mvc_project.Controllers
             {
                 return View();
             }
-            else if (obj.Title == "SciFi")
-            {
-                ModelState.AddModelError("title", "Did you just enter a genre instead of a title?");
-                return View();
-            }
             else
             {
-                _db.Books.Add(obj);
+                _db.Books.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index", "Book");
             }

@@ -98,3 +98,5 @@
 
 - 5/26/23
     - on the CRUD, put in some alternate db Find options
+    - oh man, update is super simple.  Literally replace `_db.<table>.Add(obj)` with `.Update`
+    
