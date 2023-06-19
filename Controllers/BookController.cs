@@ -49,6 +49,7 @@ namespace mvc_project.Controllers
             {
                 _db.Books.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Book successfully created!";
                 return RedirectToAction("Index", "Book");
             }
         }
@@ -81,6 +82,7 @@ namespace mvc_project.Controllers
             {
                 _db.Books.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Book edited:  That sure is different!";
                 return RedirectToAction("Index", "Book");
             }
         }
@@ -112,6 +114,7 @@ namespace mvc_project.Controllers
             {
                 _db.Books.Remove(bookFromDb);
                 _db.SaveChanges();
+                TempData["success"] = "Book deleted -- tossed in the trash!!";
                 return RedirectToAction("Index", "Book");
             }
         }

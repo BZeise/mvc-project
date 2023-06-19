@@ -101,3 +101,10 @@
     - oh man, update is super simple.  Literally replace `_db.<table>.Add(obj)` with `.Update`
     - delete working, CRUD done.
     - some tricky shits there
+
+- 6/19/23
+    - really.  a whole month in between.  try not to get depressed again.
+    - this is where I'm getting frustrated with the pattern.  Let's finish this out and go on.
+    - he's talking about 'temp data.'  This will be available just for the next render -- if the user refreshes afterwards, they'll lose their cached 'temp data'
+    - okay TempData really looks like the ViewBag.  Can access it via Razor model stuff
+        - using TempData as a crappy notification for now
